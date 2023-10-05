@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import LineCharts from './components/LineChart';
-import PieChart from './components/piechart';
+import PieChart from './components/PieChart';
 
 const profitData = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],

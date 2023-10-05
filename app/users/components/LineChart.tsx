@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2';
 
 
 
+
 const LineCharts = ({data}) => {
   return (
    <div>
