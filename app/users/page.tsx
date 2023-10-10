@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import LineCharts from './components/LineChart';
 import PieChart from './components/PieChart';
+import Bookings from './components/Bookings';
 
 const profitData = {
     labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -33,19 +34,24 @@ const profitData = {
       },
     ],
   };
+
+ 
+
+
 const Dashboard = () => {
     
     return (
         <Container>
+          <Bookings/>
           <h1>Data Visualization</h1>
-          <Row>
+          {/* <Row>
             <Col md={6}>
               <LineCharts data={profitData} />
             </Col>
             <Col md={6}>
               <PieChart data={daysOfWeekData} />
             </Col>
-          </Row>
+          </Row> */}
         </Container>
     )
 };
