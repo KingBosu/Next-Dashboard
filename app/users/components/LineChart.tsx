@@ -1,16 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { Line } from 'react-chartjs-2';
+import {chart from chart}
 
-
-
-
-const LineCharts = ({data}) => {
+const LineCharts = ({ chartData }) => {
+ 
   return (
-   <div>
-    <h2> Line Chart: Profit per day</h2>
-    <Line data={data} />
-   </div>
+    <div>
+      <h2>Profit per day</h2>
+      <Line data={chartData}/>
+    </div>
   );
 };
 
-export default LineCharts
+export default LineCharts;

@@ -4,54 +4,31 @@ import { Container, Row, Col } from 'react-bootstrap';
 import LineCharts from './components/LineChart';
 import PieChart from './components/PieChart';
 import Bookings from './components/Bookings';
-
-const profitData = {
-    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    datasets: [
-      {
-        label: 'Profit per day',
-        data: [100, 200, 150, 300, 250, 400, 350], // Replace with your profit data
-        fill: false,
-        borderColor: 'rgba(75, 192, 192, 0.6)',
-      },
-    ],
-  };
-  
-  const daysOfWeekData = {
-    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    datasets: [
-      {
-        data: [10, 15, 20, 25, 30, 35, 40], // Replace with your data
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(255, 206, 86, 0.6)',
-          'rgba(75, 192, 192, 0.6)',
-          'rgba(153, 102, 255, 0.6)',
-          'rgba(255, 159, 64, 0.6)',
-          'rgba(255, 99, 132, 0.6)',
-        ],
-      },
-    ],
-  };
-
- 
-
+import { useState } from 'react';
+import {profitData} from './profitData'
 
 const Dashboard = () => {
+
+    const [profitData, setProfitData] = useState({
+      labels: ProfitData.map((data) => data.days),
+      datasets: [{
+        label: "Profits Gained",
+        data: ProfitData.map((data) => data.userProfits)
+      }]
+    })
     
     return (
         <Container>
           <Bookings/>
           <h1>Data Visualization</h1>
-          {/* <Row>
+          <Row>
             <Col md={6}>
-              <LineCharts data={profitData} />
+              <LineCharts data={userData} />
             </Col>
-            <Col md={6}>
+            {/* <Col md={6}>
               <PieChart data={daysOfWeekData} />
-            </Col>
-          </Row> */}
+            </Col> */}
+          </Row>
         </Container>
     )
 };
