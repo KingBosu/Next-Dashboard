@@ -1,11 +1,23 @@
-import React from 'react'
-
-const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const profitData = {};
-
-daysOfWeek.forEach((day) => {
-  profitData[day] = Math.floor(Math.random() * 500); // Generate random profit values (adjust range as needed)
-});
-
-  export default profitData
-
+export const ProfitData = [
+  { day: "Monday", userProfits: 300 },
+  { day: "Tuesday", userProfits: 450 },
+  { day: "Wednesday", userProfits: 200 },
+  { day: "Thursday", userProfits: 600 },
+  { day: "Friday", userProfits: 350 },
+  { day: "Saturday", userProfits: 700 },
+  { day: "Sunday", userProfits: 400 },
+  { day: "Monday", userProfits: 250 },
+  { day: "Tuesday", userProfits: 400 },
+  { day: "Wednesday", userProfits: 300 },
+  { day: "Thursday", userProfits: 550 },
+  { day: "Friday", userProfits: 420 },
+  { day: "Saturday", userProfits: 800 },
+  { day: "Sunday", userProfits: 370 },
+  { day: "Monday", userProfits: 270 },
+  { day: "Tuesday", userProfits: 380 },
+  { day: "Wednesday", userProfits: 220 },
+  { day: "Thursday", userProfits: 650 },
+  { day: "Friday", userProfits: 380 },
+  { day: "Saturday", userProfits: 750 },
+  { day: "Sunday", userProfits: 420 },
+];
