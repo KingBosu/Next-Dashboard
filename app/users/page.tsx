@@ -1,18 +1,20 @@
-'use client'
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import LineCharts from './components/LineChart';
-import PieChart from './components/PieChart';
-import Bookings from './components/Bookings';
-import { ProfitData } from './ProfitData';
+'use client';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import LineCharts from "./components/LineChart";
+import PieChart from "./components/PieChart";
+import Bookings from "./components/Bookings";
+import { ProfitData } from "./ProfitData";
 
 const Dashboard = () => {
   const userData = {
-    labels: ProfitData.map(data => data.day),
-    datasets: [{
-      label: "Profits Gained",
-      data: ProfitData.map(data => data.userProfits),
-    }],
+    labels: ProfitData.map((data) => data.day),
+    datasets: [
+      {
+        label: "Profits Gained",
+        data: ProfitData.map((data) => data.userProfits),
+      },
+    ],
   };
 
   return (

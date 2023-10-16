@@ -1,35 +1,34 @@
-import React, { useState } from 'react';
-import {Table} from 'react-bootstrap'
-
+import React, { useState } from "react";
+import { Table } from "react-bootstrap";
 
 type Appointment = {
-    customerName: string;
-    serviceType: string;
-    amountPaid: number;
-    dateScheduled: string;
-  };
+  customerName: string;
+  serviceType: string;
+  amountPaid: number;
+  dateScheduled: string;
+};
 
 const Bookings = () => {
   // Initialize the 'appointments' state inside the component
   const [appointments, setAppointments] = useState<Appointment[]>([
     {
-        customerName: 'John Doe',
-        serviceType: 'Haircut',
-        amountPaid: 40.0,
-        dateScheduled: '2023-10-16',
-      },
-      {
-        customerName: 'Jane Smith',
-        serviceType: 'Massage',
-        amountPaid: 60.0,
-        dateScheduled: '2023-10-18',
-      },
-      {
-        customerName: 'Phillip J Fry',
-        serviceType: 'Wax',
-        amountPaid: 55.55,
-        dateScheduled: '10-20-2023'
-      }
+      customerName: "John Doe",
+      serviceType: "Haircut",
+      amountPaid: 40.0,
+      dateScheduled: "2023-10-16",
+    },
+    {
+      customerName: "Jane Smith",
+      serviceType: "Massage",
+      amountPaid: 60.0,
+      dateScheduled: "2023-10-18",
+    },
+    {
+      customerName: "Phillip J Fry",
+      serviceType: "Wax",
+      amountPaid: 55.55,
+      dateScheduled: "10-20-2023",
+    },
   ]);
 
   return (
@@ -57,6 +56,6 @@ const Bookings = () => {
       </Table>
     </>
   );
-}
+};
 
 export default Bookings;

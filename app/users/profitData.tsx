@@ -4,5 +4,4 @@ export const ProfitData = [
   { day: "Wednesday", userProfits: 200 },
   { day: "Thursday", userProfits: 600 },
   { day: "Friday", userProfits: 350 },
-
 ];
